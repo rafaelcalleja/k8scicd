@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: k8scicd-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /hello
+        backend:
+          serviceName: hello-svc
+          servicePort: 80
